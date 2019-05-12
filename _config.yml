@@ -25,7 +25,7 @@ google_analytics: "UA-139856019-1"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-basically-basic
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
 plugins:
   - jekyll-feed
 

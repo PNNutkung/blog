@@ -21,7 +21,6 @@ gem "jekyll-theme-basically-basic"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-picture-tag", git: "https://github.com/robwierzbowski/jekyll-picture-tag/"
   gem "github-pages"
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"

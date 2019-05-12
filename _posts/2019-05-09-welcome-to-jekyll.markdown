@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-05-09 22:37:07 +0700
+title: เปิดบ้าน
+date: 2019-05-12 15:30:00 +0700
 categories: jekyll update
 read_time: true
 author: pnnutkung
+categories: [life]
+tags: [blog, life]
 ---
 ![ichitan](/blog/assets/images/2019/05/09/ichitan.jpg)  
 

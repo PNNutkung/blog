@@ -17,7 +17,7 @@ title: "Tea Garden"
 email: pipatpol.tanada@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   There is a place for chillax with tea break.
-baseurl: "/blog/" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://pnnutkung.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: PNNutkung_pub
 github_username:  PNNutkung
@@ -25,9 +25,19 @@ google_analytics: "UA-139856019-1"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hacker
+theme: jekyll-theme-basically-basic
 plugins:
   - jekyll-feed
+
+picture:
+  source: "assets/images/fullsize"
+  output: "assets/images/generated"
+
+paginate: 5
+paginate_path: /blog/page:num/
+
+search: true
+search_full_content: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

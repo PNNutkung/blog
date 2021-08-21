@@ -7,7 +7,7 @@ categories: [programming]
 tags: [vue, react, javascript]
 ---
 
-หลังจากบริษัทรวมทีม dev เข้าด้วยกัน ผมได้มีโอกาสได้เข้ามาช่วยทำ Frontend ที่เป็น Vue แต่ว่าในทีม Frontend มีคนที่เขียนเป็นจำนวนน้อยเพราะเราใช้ React และเรามี library หลายอย่างที่ใช้กันภายในโดย support React เป็นหลัก เราเลยตัดสินใจว่าจะ migrate project Vue เป็น React จะช่วยให้ maintain ง่ายขึ้น
+หลังจากบริษัทรวมทีม dev เข้าด้วยกัน ผมได้มีโอกาสเข้ามาช่วยทำ Frontend ที่เป็น Vue แต่ว่าในทีม Frontend มีคนที่เขียนเป็นจำนวนน้อยเพราะเราใช้ React และเรามี library หลายอย่างที่ใช้กันภายในโดย support React เป็นหลัก เราเลยตัดสินใจว่าจะ migrate project Vue เป็น React จะช่วยให้ maintain code ได้ง่ายขึ้น
 
 ## Vuera
 

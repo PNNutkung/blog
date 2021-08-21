@@ -2,6 +2,10 @@
 layout: post
 title: Gradually Migrate from Vue to React
 image: assets/images/posts/gradually-migrate-vue-to-react.jpg
+read_time: true
+author: pnnutkung
+categories: [programming]
+tags: [vue, react, javascript]
 ---
 
 หลังจากบริษัทรวมทีม dev เข้าด้วยกัน ผมได้มีโอกาสได้เข้ามาช่วยทำ Frontend ที่เป็น VueJS แต่ว่าในทีม Frontend ก็มีคนที่เขียนเป็นจำนวนน้อย เพราะทีม Frontend เราใช้ React และเรามี library หลายอย่างที่ใช้กันภายในโดย support React เป็นหลัก เราเลยตัดสินใจว่าจะ migrate project VueJS เป็น React จะช่วยให้ maintain ง่ายขึ้น
@@ -49,9 +53,13 @@ ReactDOM.render(
 
 ## Vue with React
 
-สิ่งที่เราจะทำ ให้ Vue render element ที่มี ref และให้ ReactDOM render component ลงไป
+สิ่งที่เราจะทำ
 
-code ส่วนที่เป็น Vue component สร้าง `<div ref="app"></div>` ตรง app จะใส่เป็นอะไรก็ได้ที่เราต้องการ
+1. สร้าง Vue component ส่วน template ให้สร้าง element ที่มี ref ชื่อตามที่เราต้องการ
+2. สร้าง project ใหม่คือ library ส่วนที่เป็น React Component แยกออกมาจาก project หลัก ใช้ ReactDOM render component ลงไปใน target ที่ pass เข้ามาทาง parameter
+3. import component React เข้ามาใช้ใน Vue script โดยต้องทำใน lifecycle mounted
+
+code ส่วนที่เป็น Vue component สร้าง `<div ref="app"></div>` ตรง app จะใส่เป็นชื่ออะไรก็ได้ที่เราต้องการ
 
 ```vuejs
 <template>
@@ -74,6 +82,7 @@ export default {
 ฝั่งที่เป็น React ให้ทำเป็น export function
 
 ```jsx
-const Component = <div>Hello World</div>;
+const Component = () => <div>Hello World</div>;
+
 export default ({ target }) => render(<Component />, target);
 ```

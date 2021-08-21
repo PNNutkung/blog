@@ -9,17 +9,17 @@ categories: [elixir]
 tags: [elixir, programming, codewars]
 ---
 
-# Introduction
+## Introduction
 
 บทความนี้เกิดเนื่องจากผมสนใจในภาษา Elixir ซึ่งเป็น Functional Programming Language  
 และผมยังเป็นมือใหม่อยู่เลยจะลองนั่งเล่น kata เพื่อฝึกใช้ library พื้นฐานของภาษาให้คล่อง  
 อย่างที่เขาว่ากันว่าถ้าฐานเราไม่ดีสิ่งที่ต่อขึ้นไปข้างบนก็พังทลายลงมาได้ง่าย ลองมาเล่นข้อแรกแบบง่าย ๆ กันดูดีกว่า
 
-# Let's roll
+## Let's roll
 
 โจทย์ [Remove the time](https://www.codewars.com/kata/56b0ff16d4aa33e5bb00008e) ระดับ 8 Kyu
 
-```
+```text
 You're re-designing a blog and the blog's posts have the following format for showing the date and time a post was made:
 
 Weekday Month Day, time e.g., Friday May 2, 7pm
@@ -38,7 +38,7 @@ Assume shortenToDate's input will always be a string, e.g. "Friday May 2, 7pm". 
 ```elixir
 defmodule Datemizer do
   def shorten_to_date(datetime) do
-    { comma_index, _ } = :binary.match datetime, "," #ใช้ pattern matching เอา index ของ comma
+    { comma_index, _ } = :binary.match datetime, "," # ใช้ pattern matching เอา index ของ comma
     String.slice(datetime, 0..comma_index - 1) # return string index 0 จนไปถึงก่อน comma
   end
 end
@@ -63,8 +63,8 @@ defmodule Datemizer do
 end
 ```
 
-# Summary
+## Summary
 
-จากที่เคยเขียน Imperative Programming Language มาตลอดเราก็จะเขียนแบบลุย ๆ ซึ่งมันทำงานได้เหมือนกันแหละ แต่การที่ได้ลองมาเขียน Functional Programming ดูทำให้ค้นคบท่าอะไรใหม่ ๆ อย่างใช้ base module ที่เขามีมาให้อยู่แล้วมาแก้ปัญหา code ก็ดูอ่านง่ายขึ้นและ optimize มากกว่าด้วย(อย่างถ้าเราใช้พวก sort เขาคงเขียน function นั้นมาแบบเร็วที่สุดแล้วโดยที่เราไม่ต้องมาเขียนเอง เผลอ ๆ เขียนเองแล้วช้ากว่า)
+จากที่เคยเขียน Imperative Programming Language มาตลอดเราก็จะเขียนแบบลุย ๆ ซึ่งมันทำงานได้เหมือนกันแหละ แต่การที่ได้ลองมาเขียน Functional Programming ดูทำให้ค้นพบท่าอะไรใหม่ ๆ อย่างใช้ base module ที่เขามีมาให้อยู่แล้วมาแก้ปัญหา code ก็ดูอ่านง่ายขึ้นและ optimize มากกว่าด้วย(อย่างถ้าเราใช้พวก sort เขาคงเขียน function นั้นมาแบบเร็วที่สุดแล้วโดยที่เราไม่ต้องมาเขียนเอง เผลอ ๆ เขียนเองแล้วช้ากว่า)
 
-สรุปลองมาเปิดโลกใหม่ดูกับ Functional Programming กันเถอะ!
+มาลองเปิดโลกใหม่กับ Functional Programming กันเถอะ!

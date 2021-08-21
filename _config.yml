@@ -22,6 +22,7 @@ url: "https://blog.pnnutkung.dev" # the base hostname & protocol for your site, 
 twitter_username: PNNutkung_pub
 github_username:  PNNutkung
 google_analytics: "UA-139856019-1"
+logo: /assets/images/seo/favicon.ico
 
 # Build settings
 markdown: kramdown
@@ -31,9 +32,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-
-feed:
-  path: atom.xml
 
 paginate: 10
 paginate_path: /page:num/

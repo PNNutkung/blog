@@ -15,7 +15,7 @@ tags: [vue, react, javascript]
 
 ## Back to basic
 
-สุดท้ายเลยถาม[มิตรสหายท่านนึง](https://github.com/ReiiYuki)และได้คำตอบว่าเราใช้ท่านี้กันดีกว่า  
+สุดท้ายเลยถาม[มิตรสหายท่านหนึ่ง](https://github.com/ReiiYuki)และได้คำตอบว่าเราใช้ท่านี้กันดีกว่า  
 อย่างที่เรารู้กัน React จะ render component ใส่เข้าไปใน DOM ที่เรากำหนดไว้
 
 **ตัวอย่าง** ถ้าเราใช้ Create React App สร้าง project ขึ้นมาใหม่ ใน folder `public/index.html` code หน้าตาจะประมาณข้างล่างนี้

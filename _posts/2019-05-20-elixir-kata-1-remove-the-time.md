@@ -1,15 +1,10 @@
 ---
 layout: post
 title: "Elixir Kata 1: Remove the time"
-date: 2019-05-21 00:00:00 +0700
-categories: jekyll update
-read_time: true
 author: pnnutkung
-categories: [elixir]
+categories: [programming]
 tags: [elixir, programming, codewars]
 ---
-
-## Introduction
 
 บทความนี้เกิดเนื่องจากผมสนใจในภาษา Elixir ซึ่งเป็น Functional Programming Language  
 และผมยังเป็นมือใหม่อยู่เลยจะลองนั่งเล่น kata เพื่อฝึกใช้ library พื้นฐานของภาษาให้คล่อง  

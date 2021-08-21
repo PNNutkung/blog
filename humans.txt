@@ -1,8 +1,8 @@
 # humanstxt.org/
 
 # TEAM
-PNNutkung - Full Stack Software Engineer @blognone.com
+PNNutkung - Site Reliability Engineer @LINE MAN Wongnai
 
-Site: https://pnnutkung.github.io/blog
+Site: https://blog.pnnutkung.dev
 Twitter: PNNutkung_pub
 Location: Bangkok, Thailand

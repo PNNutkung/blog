@@ -7,16 +7,15 @@ categories: [programming]
 tags: [vue, react, javascript]
 ---
 
-หลังจากบริษัทรวมทีม dev เข้าด้วยกัน ผมได้มีโอกาสได้เข้ามาช่วยทำ Frontend ที่เป็น VueJS แต่ว่าในทีม Frontend ก็มีคนที่เขียนเป็นจำนวนน้อย เพราะทีม Frontend เราใช้ React และเรามี library หลายอย่างที่ใช้กันภายในโดย support React เป็นหลัก เราเลยตัดสินใจว่าจะ migrate project VueJS เป็น React จะช่วยให้ maintain ง่ายขึ้น
+หลังจากบริษัทรวมทีม dev เข้าด้วยกัน ผมได้มีโอกาสได้เข้ามาช่วยทำ Frontend ที่เป็น Vue แต่ว่าในทีม Frontend มีคนที่เขียนเป็นจำนวนน้อยเพราะเราใช้ React และเรามี library หลายอย่างที่ใช้กันภายในโดย support React เป็นหลัก เราเลยตัดสินใจว่าจะ migrate project Vue เป็น React จะช่วยให้ maintain ง่ายขึ้น
 
 ## Vuera
 
-ผมลองหา libray ที่จะช่วยให้ Vue กับ React ใช้งานด้วยกันได้ ก็ได้มาเจอ lib นึงที่ชื่อว่า [vuera](https://github.com/akxcv/vuera) ค่อนข้างน่าสนใจ แต่เขาไม่ได้พัฒนาต่อมานานแล้วก็เลยตัดสินใจไม่ใช้ดีกว่า
+ผมลองหา libray ที่จะช่วยให้ Vue กับ React ใช้งานด้วยกันได้ ก็ได้มาเจอ lib นึงที่ชื่อว่า [vuera](https://github.com/akxcv/vuera) ค่อนข้างน่าสนใจ แต่เขาไม่ได้พัฒนาต่อมานานแล้ว เลยตัดสินใจไม่ใช้ดีกว่า
 
 ## Back to basic
 
-สุดท้ายก็เลยถาามมิตรสหายท่านนึงและได้คำตอบว่าเราใช้ท่านี้กันดีกว่า เรียกว่าเป็น basic ของการเขียน React เลยก็ว่าได้
-
+สุดท้ายเลยถาม[มิตรสหายท่านนึง](https://github.com/ReiiYuki)และได้คำตอบว่าเราใช้ท่านี้กันดีกว่า  
 อย่างที่เรารู้กัน React จะ render component ใส่เข้าไปใน DOM ที่เรากำหนดไว้
 
 **ตัวอย่าง** ถ้าเราใช้ Create React App สร้าง project ขึ้นมาใหม่ ใน folder `public/index.html` code หน้าตาจะประมาณข้างล่างนี้
@@ -60,7 +59,8 @@ ReactDOM.render(
 3. import component React เข้ามาใช้ใน Vue script โดยต้องทำใน lifecycle mounted
 
 code ส่วนที่เป็น Vue component สร้าง `<div ref="app"></div>` ตรง `app` จะใส่เป็นชื่ออะไรก็ได้ที่เราต้องการ  
-ส่วน script ให้ import React component ตรง parameter ใส่ target เป็น ref ของ element ที่เราจะให้ render React ลงไป
+ส่วน script ให้ import React component  
+ตรง parameter ใส่ target เป็น ref ของ element ที่เราจะให้ render React ลงไป
 
 ```vue
 <template>

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Elixir Kata 1: Remove the time"
-date: 2019-05-21 00:00:00 +0700
-read_time: true
 author: pnnutkung
 categories: [programming]
 tags: [elixir, programming, codewars]

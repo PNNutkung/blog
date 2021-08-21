@@ -2,7 +2,6 @@
 layout: post
 title: Gradually Migrate from Vue to React
 image: assets/images/posts/gradually-migrate-vue-to-react.jpg
-read_time: true
 author: pnnutkung
 categories: [programming]
 tags: [vue, react, javascript]
@@ -35,7 +34,7 @@ tags: [vue, react, javascript]
 สังเกตว่าจะมี `<div id="root"></div>` เอาไว้ให้ `ReactDOM` render component ใส่ลงไป  
 ดู code ใน `src/index.js` ประกอบ
 
-```javascript
+```jsx
 ...
 ReactDOM.render(
   <React.StrictMode>
@@ -56,25 +55,26 @@ ReactDOM.render(
 สิ่งที่เราจะทำ
 
 1. สร้าง Vue component ส่วน template ให้สร้าง element ที่มี ref ชื่อตามที่เราต้องการ
-2. สร้าง project ใหม่คือ library ส่วนที่เป็น React Component แยกออกมาจาก project หลัก ใช้ ReactDOM render component ลงไปใน target ที่ pass เข้ามาทาง parameter
+2. สร้าง project ใหม่ที่เป็น React component library แยกออกมาจาก project หลักที่เป็น Vue  
+   ใช้ ReactDOM render component ลงไปใน target ที่ pass เข้ามาทาง parameter
 3. import component React เข้ามาใช้ใน Vue script โดยต้องทำใน lifecycle mounted
 
-code ส่วนที่เป็น Vue component สร้าง `<div ref="app"></div>` ตรง app จะใส่เป็นชื่ออะไรก็ได้ที่เราต้องการ
+code ส่วนที่เป็น Vue component สร้าง `<div ref="app"></div>` ตรง `app` จะใส่เป็นชื่ออะไรก็ได้ที่เราต้องการ  
+ส่วน script ให้ import React component ตรง parameter ใส่ target เป็น ref ของ element ที่เราจะให้ render React ลงไป
 
-```vuejs
+```vue
 <template>
-  <div ref="app">
-  </div>
+  <div ref="app"></div>
 </template>
 
 <script>
-import HelloWorld from "@component/react";
+import HelloWorld from "@component/react"; // ตรงนี้ import library React ที่เราสร้างขึ้นมาเอง
 
 export default {
   mounted() {
-    HelloWorld({ target: this.$ref.app });
-  }
-}
+    HelloWorld({ target: this.$ref.app }); // ถ้าอยาก pass ค่าอะไรไปใช้ใน React ก็สามารถเพิ่มลงไปได้
+  },
+};
 </script>
 ...
 ```
@@ -82,7 +82,15 @@ export default {
 ฝั่งที่เป็น React ให้ทำเป็น export function
 
 ```jsx
+import { render } from "react-dom";
+import React from "react";
+
 const Component = () => <div>Hello World</div>;
 
 export default ({ target }) => render(<Component />, target);
 ```
+
+## Summary
+
+วิธีนี้ช่วยให้เราค่อย ๆ เปลี่ยน code ส่วนที่เป็น Vue เป็น React ได้ โดยไม่ต้องเปลี่ยนทีเดียวทั้งหมด  
+user ที่ใช้งานอาจจะไม่สังเกตเห็นความเปลี่ยนแปลง เรื่อง performance ตอนนี้ที่ลองใช้มายังไม่ได้รู้สึกว่าแย่หรือช้า

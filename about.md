@@ -9,6 +9,8 @@ Feel free to check my GitHub here 👉 [PNNutkung](https://github.com/PNNutkung)
 
 ## Skills
 
+- Kubernetes
+- Docker
 - JavaScript
 - TypeScript
 - GO
@@ -18,8 +20,10 @@ Feel free to check my GitHub here 👉 [PNNutkung](https://github.com/PNNutkung)
 
 ## Working Experience
 
+- Senior Site Reliability Engineer at [LINE MAN](https://lineman.line.me/) [Wongnai](https://wongnai.com/)  
+  (Jan 2022 - Present)
 - Site Reliability Engineer at [LINE MAN](https://lineman.line.me/) [Wongnai](https://wongnai.com/)  
-  (June 2021 - Present)
+  (June 2021 - Dec 2021)
 - Fullstack Software Engineer at [LINE MAN](https://lineman.line.me/) [Wongnai](https://wongnai.com/)  
   (September 2020 - June 2021)
   - working on [LINE MAN](https://lineman.line.me/) Driver Service
